@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Teko:300,400&display=swap");
 
 a {
   color: #fff !important;
@@ -19,7 +19,7 @@ header {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95)),
-              url("../img/header-bg.jpg") center no-repeat;
+    url("../img/header-bg.jpg") center no-repeat;
   position: relative;
 }
 
@@ -40,7 +40,7 @@ header > .container {
 }
 
 .navbar-brand:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .hamburger-menu {
@@ -50,7 +50,7 @@ header > .container {
   width: 50px;
   height: 50px;
   display: flex;
-  background-color: #101D2C;
+  background-color: #101d2c;
   border-radius: 4px;
   cursor: pointer;
   z-index: 999;
@@ -58,7 +58,7 @@ header > .container {
 
 .hamburger-menu i {
   font-size: 30px;
-  color: rgba(198, 153, 99, .7);
+  color: rgba(198, 153, 99, 0.7);
   margin: auto;
 }
 
@@ -81,14 +81,14 @@ header > .container {
   width: 100%;
   height: 100vh;
   list-style: none;
-  background-color: #101D2C;
+  background-color: #101d2c;
   z-index: 900;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
   transform: scale(0);
-  transition: opacity 650ms;
+  transition: ease-in-out 650ms;
 }
 
 .nav-list.open {
@@ -105,7 +105,7 @@ header > .container {
 }
 
 .hero-text h1 {
-  font-family: 'Niconne', cursive;
+  font-family: "Niconne", cursive;
   color: #c69963;
 }
 
@@ -118,13 +118,18 @@ header > .container {
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,.3), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: all 650ms;
 }
 
@@ -136,15 +141,15 @@ header > .container {
 
 .section-heading h4 {
   text-transform: uppercase;
-  color: #101D2C;
+  color: #101d2c;
   line-height: 0;
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
 .section-heading h1 {
-  font-family: 'Niconne', cursive;
+  font-family: "Niconne", cursive;
   color: #c69963;
 }
 
@@ -159,6 +164,90 @@ header > .container {
   background-color: #c69963;
 }
 
+/* Menu section */
+.menu {
+  background-color: #101d2c;
+}
+
+.shop-info i {
+  color: #c69963;
+  font-size: 50px;
+}
+
+.shop-info h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.shop-info p,
+.shop-info address {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.point-right,
+.point-left {
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.point-left::before,
+.point-right::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.menu-item-desc {
+  padding: 50px 10px;
+  color: #212529;
+  margin: auto;
+}
+
+.menu-item-desc h6 {
+  color: #c69963;
+  font-size: 20px;
+}
+
+.menu-item-desc h1 {
+  color: #101d2c;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+}
+
+/* Chef section */
+
+.card-body h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+}
+
+.card-body h6 {
+  font-size: 16px;
+  color: #c69963;
+}
+
+footer {
+  background-color: #101d2c;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (min-width: 576px) {
   .navbar-brand {
     max-width: 150px;
@@ -167,6 +256,15 @@ header > .container {
   .hamburger-menu {
     top: 35px;
     right: 25px;
+  }
+
+  .point-left::before,
+  .point-right::before {
+    display: none;
+  }
+
+  .menu-item-desc {
+    padding: 50px 20px;
   }
 }
 
@@ -184,7 +282,7 @@ header > .container {
   .hamburger-menu {
     display: none;
   }
-  
+
   .navbar-brand {
     position: initial;
     transform: initial;
@@ -217,7 +315,7 @@ header > .container {
   }
 
   .nav-link::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -231,5 +329,32 @@ header > .container {
 
   .nav-link:hover::before {
     transform: scaleX(1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .point-left::before,
+  .point-right::before {
+    display: block;
+    top: 50%;
+    left: initial;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  .point-left::before {
+    left: -12px;
+  }
+
+  .point-right::before {
+    right: -12px;
+  }
+
+  .menu-item-desc p {
+    display: none;
+  }
+
+  .menu-item-desc .btn {
+    color: #ffffff !important;
+    background-color: #c69963;
   }
 }
